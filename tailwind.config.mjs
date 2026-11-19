@@ -31,9 +31,6 @@ export default {
           500: '#f87171',
           600: '#ef4444',
         }
-      },
-      backgroundImage: {
-        'coastal-mesh': 'radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.12) 0px, transparent 50%), radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.15) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.08) 0px, transparent 50%)',
       }
     },
   },

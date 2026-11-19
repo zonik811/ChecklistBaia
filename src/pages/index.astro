@@ -7,288 +7,288 @@ import Layout from '../layouts/Layout.astro';
   subtitle="Todo lo que necesitas gestionar, contratar y tramitar para rentar tu apartamento en Baia Kristal con total tranquilidad y cero multas."
 >
   <!-- Banner Costero de Bienvenida & Resumen Rápido -->
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10">
     
-    <!-- Tarjeta Principal: Laguna y Resumen (Texto Nítido y Foto Enmarcada Independiente) -->
-    <div class="lg:col-span-2 bg-white border border-sky-200 rounded-3xl p-6 sm:p-8 shadow-lg shadow-sky-950/5 flex flex-col justify-between">
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+    <!-- Tarjeta Principal: Laguna y Resumen -->
+    <div class="lg:col-span-2 bg-white border border-sky-200 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-sm flex flex-col justify-between">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 items-center">
         <!-- Columna Izquierda: Texto 100% Nítido y Legible -->
         <div class="md:col-span-7">
-          <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-sky-700 mb-3 bg-sky-50 px-3 py-1 rounded-full w-fit border border-sky-100">
-            <span>🌴</span> Conjunto Residencial Baia Kabo • Cartagena
+          <div class="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-sky-700 mb-2 sm:mb-3 bg-sky-50 px-2.5 sm:px-3 py-1 rounded-full w-fit border border-sky-100">
+            <span>🌴</span> Baia Kabo • Cartagena
           </div>
-          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 mb-3 tracking-tight">
+          <h2 class="text-xl sm:text-2xl lg:text-3xl font-black text-slate-900 mb-2 sm:mb-3 tracking-tight leading-tight">
             Tu Hoja de Ruta para Operar Legalmente
           </h2>
-          <p class="text-slate-600 text-sm leading-relaxed">
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
             El reglamento interno aprobado el <strong>25 de febrero de 2025</strong> regula con detalle cada aspecto de la renta turística. 
             Aquí tienes todas las herramientas y requisitos explicados de forma clara para proteger tu patrimonio, evitar sanciones de la administración y garantizar una experiencia fluida a tus huéspedes.
           </p>
         </div>
 
-        <!-- Columna Derecha: Foto Enmarcada Limpia (Sin texto encima) -->
+        <!-- Columna Derecha: Foto Enmarcada Limpia -->
         <div class="md:col-span-5">
-          <div class="relative rounded-2xl overflow-hidden shadow-md border-2 border-sky-100 aspect-video md:aspect-square group">
+          <div class="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-sm border border-sky-100 h-44 sm:h-52 md:h-48 lg:h-52 w-full">
             <img 
               src="/imagen1.webp" 
               alt="Complejo Baia Kristal" 
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover"
             />
-            <div class="absolute bottom-2 left-2 right-2 bg-slate-900/70 backdrop-blur-sm text-white px-3 py-1.5 rounded-xl text-[11px] font-semibold flex items-center justify-between">
+            <div class="absolute bottom-2 left-2 right-2 bg-slate-900/80 backdrop-blur-sm text-white px-2.5 py-1 rounded-lg text-[10px] font-semibold flex items-center justify-between">
               <span>Laguna Crystal Lagoons</span>
-              <span class="text-cyan-300">Baia Kristal</span>
+              <span class="text-cyan-300">Cartagena</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Métricas Clave de Operación en el banner -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 mt-6 border-t border-slate-100">
-        <div class="bg-sky-50/70 rounded-2xl p-3.5 border border-sky-100">
-          <span class="text-sky-700 text-[11px] font-semibold block">Estadía Mínima</span>
-          <span class="text-xl font-black text-slate-900">1 Noche</span>
-          <span class="text-[10px] text-slate-500 block">Prohibido pasadías</span>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-slate-100">
+        <div class="bg-sky-50/70 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 border border-sky-100">
+          <span class="text-sky-700 text-[10px] sm:text-[11px] font-semibold block">Estadía Mínima</span>
+          <span class="text-base sm:text-xl font-black text-slate-900">1 Noche</span>
+          <span class="text-[9px] sm:text-[10px] text-slate-500 block">Prohibido pasadías</span>
         </div>
-        <div class="bg-teal-50/70 rounded-2xl p-3.5 border border-teal-100">
-          <span class="text-teal-700 text-[11px] font-semibold block">Fumigación</span>
-          <span class="text-xl font-black text-slate-900">Cada 3 meses</span>
-          <span class="text-[10px] text-slate-500 block">Certificado radicado</span>
+        <div class="bg-teal-50/70 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 border border-teal-100">
+          <span class="text-teal-700 text-[10px] sm:text-[11px] font-semibold block">Fumigación</span>
+          <span class="text-base sm:text-xl font-black text-slate-900">Cada 3 meses</span>
+          <span class="text-[9px] sm:text-[10px] text-slate-500 block">Radicar certificado</span>
         </div>
-        <div class="bg-amber-50/70 rounded-2xl p-3.5 border border-amber-100">
-          <span class="text-amber-700 text-[11px] font-semibold block">Aviso Vehicular</span>
-          <span class="text-xl font-black text-slate-900">48 Horas</span>
-          <span class="text-[10px] text-slate-500 block">Anticipación estricta</span>
+        <div class="bg-amber-50/70 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 border border-amber-100">
+          <span class="text-amber-700 text-[10px] sm:text-[11px] font-semibold block">Aviso Vehículo</span>
+          <span class="text-base sm:text-xl font-black text-slate-900">48 Horas</span>
+          <span class="text-[9px] sm:text-[10px] text-slate-500 block">Anticipación</span>
         </div>
-        <div class="bg-rose-50/70 rounded-2xl p-3.5 border border-rose-100">
-          <span class="text-rose-700 text-[11px] font-semibold block">Multa Manillas</span>
-          <span class="text-xl font-black text-rose-600">$100k/día</span>
-          <span class="text-[10px] text-slate-500 block">Por huésped sin uso</span>
+        <div class="bg-rose-50/70 rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 border border-rose-100">
+          <span class="text-rose-700 text-[10px] sm:text-[11px] font-semibold block">Multa Manillas</span>
+          <span class="text-base sm:text-xl font-black text-rose-600">$100k/día</span>
+          <span class="text-[9px] sm:text-[10px] text-slate-500 block">Por persona</span>
         </div>
       </div>
     </div>
 
     <!-- Alertas Rojas de Máxima Atención -->
-    <div class="bg-white border-2 border-rose-200/80 rounded-3xl p-6 sm:p-7 shadow-lg shadow-rose-950/5 flex flex-col justify-between">
+    <div class="bg-white border-2 border-rose-200/80 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-sm flex flex-col justify-between">
       <div>
-        <div class="flex items-center gap-2.5 text-rose-600 font-extrabold text-sm mb-4">
-          <span class="text-2xl">🚨</span>
+        <div class="flex items-center gap-2 text-rose-600 font-extrabold text-xs sm:text-sm mb-3 sm:mb-4">
+          <span class="text-xl sm:text-2xl shrink-0">🚨</span>
           <span>4 Puntos Críticos para Evitar Multas</span>
         </div>
-        <ul class="space-y-3.5 text-xs text-slate-700">
-          <li class="flex items-start gap-2.5">
-            <span class="w-5 h-5 rounded-full bg-rose-100 text-rose-700 font-bold flex items-center justify-center shrink-0 text-[11px]">1</span>
-            <span><strong>Cero llaves en portería:</strong> Prohibido pedirle a los guardias de seguridad o recepción que entreguen llaves (Art. 5.1).</span>
+        <ul class="space-y-2.5 sm:space-y-3 text-xs text-slate-700">
+          <li class="flex items-start gap-2">
+            <span class="w-4 h-4 rounded-full bg-rose-100 text-rose-700 font-bold flex items-center justify-center shrink-0 text-[10px] mt-0.5">1</span>
+            <span><strong>Cero llaves en portería:</strong> Prohibido pedirle a seguridad que entregue llaves (Art. 5.1).</span>
           </li>
-          <li class="flex items-start gap-2.5">
-            <span class="w-5 h-5 rounded-full bg-rose-100 text-rose-700 font-bold flex items-center justify-center shrink-0 text-[11px]">2</span>
-            <span><strong>Menores con Notaría:</strong> Si viajan sin uno de los padres o con terceros, la autorización notariada es obligatoria (Art. 4.1).</span>
+          <li class="flex items-start gap-2">
+            <span class="w-4 h-4 rounded-full bg-rose-100 text-rose-700 font-bold flex items-center justify-center shrink-0 text-[10px] mt-0.5">2</span>
+            <span><strong>Menores con Notaría:</strong> Si viajan sin ambos padres, autorización notariada obligatoria (Art. 4.1).</span>
           </li>
-          <li class="flex items-start gap-2.5">
-            <span class="w-5 h-5 rounded-full bg-rose-100 text-rose-700 font-bold flex items-center justify-center shrink-0 text-[11px]">3</span>
-            <span><strong>Fumigación trimestral:</strong> Omitir radicarla genera multa de <strong>1 cuota completa de administración</strong> y reporte al DADIS (Art. 7.3).</span>
+          <li class="flex items-start gap-2">
+            <span class="w-4 h-4 rounded-full bg-rose-100 text-rose-700 font-bold flex items-center justify-center shrink-0 text-[10px] mt-0.5">3</span>
+            <span><strong>Fumigación trimestral:</strong> Omitirla genera multa de <strong>1 cuota entera</strong> y reporte DADIS (Art. 7.3).</span>
           </li>
-          <li class="flex items-start gap-2.5">
-            <span class="w-5 h-5 rounded-full bg-rose-100 text-rose-700 font-bold flex items-center justify-center shrink-0 text-[11px]">4</span>
-            <span><strong>Protección de marca:</strong> Prohibido usar el nombre "Baia Kristal" en anuncios comerciales de Airbnb/Booking (Art. 8.9).</span>
+          <li class="flex items-start gap-2">
+            <span class="w-4 h-4 rounded-full bg-rose-100 text-rose-700 font-bold flex items-center justify-center shrink-0 text-[10px] mt-0.5">4</span>
+            <span><strong>Protección de marca:</strong> Prohibido usar "Baia Kristal" en anuncios de Airbnb (Art. 8.9).</span>
           </li>
         </ul>
       </div>
 
-      <div class="mt-5 pt-4 border-t border-rose-100">
+      <div class="mt-4 pt-3 border-t border-rose-100">
         <a href="/reglas-multas" class="text-xs font-bold text-rose-600 hover:text-rose-700 flex items-center justify-between group">
-          <span>Ver catálogo de prohibiciones y multas</span>
-          <span class="group-hover:translate-x-1 transition-transform text-sm">→</span>
+          <span>Ver catálogo de sanciones</span>
+          <span class="group-hover:translate-x-1 transition-transform">→</span>
         </a>
       </div>
     </div>
   </div>
 
   <!-- Sección Interactiva: Mi Checklist de Cumplimiento -->
-  <div class="bg-white border border-sky-100 rounded-3xl p-6 sm:p-8 mb-10 shadow-lg shadow-sky-950/5">
-    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+  <div class="bg-white border border-sky-100 rounded-2xl sm:rounded-3xl p-4 sm:p-7 mb-8 sm:mb-10 shadow-sm">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6">
       <div>
         <div class="flex items-center gap-2">
-          <span class="text-2xl">✅</span>
-          <h3 class="text-xl font-bold text-slate-900">Tu Checklist de Preparación</h3>
+          <span class="text-xl sm:text-2xl">✅</span>
+          <h3 class="text-base sm:text-xl font-bold text-slate-900">Tu Checklist de Preparación</h3>
         </div>
-        <p class="text-xs sm:text-sm text-slate-500 mt-1">Marca cada trámite cuando lo tengas listo. Tu avance se guarda automáticamente en este equipo.</p>
+        <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">Marca cada trámite cuando lo tengas listo. Tu avance se guarda solo en este navegador.</p>
       </div>
-      <div id="progress-container" class="flex items-center gap-3 bg-sky-50 px-4 py-2 rounded-2xl border border-sky-100">
-        <span id="progress-text" class="text-xs font-bold text-sky-800">0 de 6 completados</span>
-        <div class="w-32 bg-sky-200/80 rounded-full h-3 overflow-hidden">
-          <div id="progress-bar" class="bg-gradient-to-r from-sky-500 to-teal-400 h-3 rounded-full transition-all duration-300" style="width: 0%"></div>
+      <div id="progress-container" class="flex items-center justify-between sm:justify-start gap-3 bg-sky-50 px-3.5 py-2 rounded-xl sm:rounded-2xl border border-sky-100">
+        <span id="progress-text" class="text-[11px] sm:text-xs font-bold text-sky-800">0 de 6</span>
+        <div class="w-24 sm:w-32 bg-sky-200/80 rounded-full h-2.5 sm:h-3 overflow-hidden">
+          <div id="progress-bar" class="bg-gradient-to-r from-sky-500 to-teal-400 h-full rounded-full transition-all duration-300" style="width: 0%"></div>
         </div>
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5" id="checklist-items">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 sm:gap-3.5" id="checklist-items">
       
-      <label class="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
-        <input type="checkbox" id="check-seguro" class="mt-1 w-5 h-5 rounded-md text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0" />
+      <label class="flex items-start gap-3 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
+        <input type="checkbox" id="check-seguro" class="mt-0.5 w-4 h-4 sm:w-5 sm:h-5 rounded text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0 shrink-0" />
         <div class="text-xs">
-          <span class="font-bold text-slate-900 text-sm block">1. Póliza Multirriesgo Especializada (Art. 7.1)</span>
-          <span class="text-slate-600">Con las 9 coberturas mínimas obligatorias (incendio, rotura de agua, vendaval, AMIT, hurto).</span>
+          <span class="font-bold text-slate-900 text-xs sm:text-sm block">1. Póliza Multirriesgo (Art. 7.1)</span>
+          <span class="text-slate-600 text-[11px] sm:text-xs">Con las 9 coberturas mínimas (incendio, agua, vendaval, AMIT, hurto).</span>
         </div>
       </label>
 
-      <label class="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
-        <input type="checkbox" id="check-fumigacion" class="mt-1 w-5 h-5 rounded-md text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0" />
+      <label class="flex items-start gap-3 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
+        <input type="checkbox" id="check-fumigacion" class="mt-0.5 w-4 h-4 sm:w-5 sm:h-5 rounded text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0 shrink-0" />
         <div class="text-xs">
-          <span class="font-bold text-slate-900 text-sm block">2. Fumigación Trimestral Radicada (Art. 7.3)</span>
-          <span class="text-slate-600">Certificado vigente de empresa especializada radicado ante la administración de Baia Kabo.</span>
+          <span class="font-bold text-slate-900 text-xs sm:text-sm block">2. Fumigación Trimestral (Art. 7.3)</span>
+          <span class="text-slate-600 text-[11px] sm:text-xs">Certificado vigente de empresa especializada radicado ante administración.</span>
         </div>
       </label>
 
-      <label class="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
-        <input type="checkbox" id="check-rnt" class="mt-1 w-5 h-5 rounded-md text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0" />
+      <label class="flex items-start gap-3 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
+        <input type="checkbox" id="check-rnt" class="mt-0.5 w-4 h-4 sm:w-5 sm:h-5 rounded text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0 shrink-0" />
         <div class="text-xs">
-          <span class="font-bold text-slate-900 text-sm block">3. Registro Nacional de Turismo (RNT)</span>
-          <span class="text-slate-600">Trámite digital gratuito ante MinCIT para operar legalmente como vivienda turística.</span>
+          <span class="font-bold text-slate-900 text-xs sm:text-sm block">3. Registro Nacional de Turismo (RNT)</span>
+          <span class="text-slate-600 text-[11px] sm:text-xs">Trámite digital gratuito ante MinCIT para operar legalmente como vivienda turística.</span>
         </div>
       </label>
 
-      <label class="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
-        <input type="checkbox" id="check-expensas" class="mt-1 w-5 h-5 rounded-md text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0" />
+      <label class="flex items-start gap-3 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
+        <input type="checkbox" id="check-expensas" class="mt-0.5 w-4 h-4 sm:w-5 sm:h-5 rounded text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0 shrink-0" />
         <div class="text-xs">
-          <span class="font-bold text-slate-900 text-sm block">4. Paz y Salvo de Expensas (Art. 4.4)</span>
-          <span class="text-slate-600">Cuota de administración al día para habilitar el acceso a la Laguna Kristal y piscinas.</span>
+          <span class="font-bold text-slate-900 text-xs sm:text-sm block">4. Paz y Salvo de Expensas (Art. 4.4)</span>
+          <span class="text-slate-600 text-[11px] sm:text-xs">Cuota al día para habilitar acceso a la Laguna Kristal y piscinas a huéspedes.</span>
         </div>
       </label>
 
-      <label class="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
-        <input type="checkbox" id="check-clausula" class="mt-1 w-5 h-5 rounded-md text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0" />
+      <label class="flex items-start gap-3 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
+        <input type="checkbox" id="check-clausula" class="mt-0.5 w-4 h-4 sm:w-5 sm:h-5 rounded text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0 shrink-0" />
         <div class="text-xs">
-          <span class="font-bold text-slate-900 text-sm block">5. Cláusula de Turismo Responsable (Art. 7.5)</span>
-          <span class="text-slate-600">Incluida en tus contratos o en el mensaje de bienvenida de Airbnb/Booking.</span>
+          <span class="font-bold text-slate-900 text-xs sm:text-sm block">5. Cláusula de Turismo Responsable (Art. 7.5)</span>
+          <span class="text-slate-600 text-[11px] sm:text-xs">Incluida en tus contratos o en el mensaje de bienvenida de Airbnb/Booking.</span>
         </div>
       </label>
 
-      <label class="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
-        <input type="checkbox" id="check-operador" class="mt-1 w-5 h-5 rounded-md text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0" />
+      <label class="flex items-start gap-3 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50/70 border border-slate-200/80 hover:bg-sky-50/50 hover:border-sky-300 cursor-pointer transition-all">
+        <input type="checkbox" id="check-operador" class="mt-0.5 w-4 h-4 sm:w-5 sm:h-5 rounded text-sky-600 bg-white border-slate-300 focus:ring-0 focus:ring-offset-0 shrink-0" />
         <div class="text-xs">
-          <span class="font-bold text-slate-900 text-sm block">6. Registro de Intermediario / Agencia (Art. 6)</span>
-          <span class="text-slate-600">Si un tercero te ayuda a entregar llaves, radicar carpeta 10 días hábiles antes.</span>
+          <span class="font-bold text-slate-900 text-xs sm:text-sm block">6. Registro de Intermediario (Art. 6)</span>
+          <span class="text-slate-600 text-[11px] sm:text-xs">Si un tercero te ayuda a entregar llaves, radicar carpeta 10 días antes.</span>
         </div>
       </label>
 
     </div>
   </div>
 
-  <!-- Cuadrícula de Navegación Temática (Estilo Resort) -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <!-- Cuadrícula de Navegación Temática -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-6">
     
-    <!-- Card 1: Requisitos Obligatorios -->
-    <a href="/requisitos" class="group bg-white border border-sky-100 hover:border-sky-300 rounded-3xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-950/10 shadow-sm flex flex-col justify-between">
+    <!-- Card 1: Requisitos -->
+    <a href="/requisitos" class="group bg-white border border-sky-100 hover:border-sky-300 rounded-2xl sm:rounded-3xl p-4 sm:p-6 transition-all hover:-translate-y-1 shadow-sm flex flex-col justify-between">
       <div>
-        <div class="w-13 h-13 rounded-2xl bg-sky-50 border border-sky-200 text-3xl flex items-center justify-center mb-4 text-sky-600 group-hover:scale-110 transition-transform">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-sky-50 border border-sky-200 text-2xl sm:text-3xl flex items-center justify-center mb-3 text-sky-600 group-hover:scale-105 transition-transform">
           🛡️
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-sky-600 transition-colors">Requisitos Previos</h3>
-        <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-          Póliza de seguro obligatoria (con las 9 coberturas mínimas), fumigación trimestral para no pagar multas de expensa, paz y salvo y normas de dotación.
+        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5 group-hover:text-sky-600 transition-colors">Requisitos Previos</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Póliza de seguro obligatoria (con las 9 coberturas mínimas), fumigación trimestral para no pagar multas, y paz y salvo.
         </p>
       </div>
-      <div class="mt-6 flex items-center text-xs font-bold text-sky-600 gap-1.5">
-        <span>Explorar requisitos a fondo</span>
+      <div class="mt-4 flex items-center text-xs font-bold text-sky-600 gap-1.5">
+        <span>Explorar requisitos</span>
         <span class="group-hover:translate-x-1 transition-transform">→</span>
       </div>
     </a>
 
-    <!-- Card 2: Protocolo de Reserva -->
-    <a href="/protocolo-reserva" class="group bg-white border border-cyan-100 hover:border-cyan-300 rounded-3xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-950/10 shadow-sm flex flex-col justify-between">
+    <!-- Card 2: Protocolo -->
+    <a href="/protocolo-reserva" class="group bg-white border border-cyan-100 hover:border-cyan-300 rounded-2xl sm:rounded-3xl p-4 sm:p-6 transition-all hover:-translate-y-1 shadow-sm flex flex-col justify-between">
       <div>
-        <div class="w-13 h-13 rounded-2xl bg-cyan-50 border border-cyan-200 text-3xl flex items-center justify-center mb-4 text-cyan-600 group-hover:scale-110 transition-transform">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-cyan-50 border border-cyan-200 text-2xl sm:text-3xl flex items-center justify-center mb-3 text-cyan-600 group-hover:scale-105 transition-transform">
           📋
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-cyan-600 transition-colors">Protocolo por Reserva</h3>
-        <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-          Qué hacer 48h antes (vehículos y horarios especiales), check-in de 2pm a 9pm, manillas obligatorias, custodia de tarjetas (5 años) y reglas notariales de menores.
+        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5 group-hover:text-cyan-600 transition-colors">Protocolo por Reserva</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Qué hacer 48h antes (vehículos y horarios especiales), check-in de 2pm a 9pm, manillas obligatorias y menores con notaría.
         </p>
       </div>
-      <div class="mt-6 flex items-center text-xs font-bold text-cyan-600 gap-1.5">
-        <span>Ver cronología paso a paso</span>
+      <div class="mt-4 flex items-center text-xs font-bold text-cyan-600 gap-1.5">
+        <span>Ver paso a paso</span>
         <span class="group-hover:translate-x-1 transition-transform">→</span>
       </div>
     </a>
 
-    <!-- Card 3: Operadores y Terceros -->
-    <a href="/operadores" class="group bg-white border border-teal-100 hover:border-teal-300 rounded-3xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-950/10 shadow-sm flex flex-col justify-between">
+    <!-- Card 3: Operadores -->
+    <a href="/operadores" class="group bg-white border border-teal-100 hover:border-teal-300 rounded-2xl sm:rounded-3xl p-4 sm:p-6 transition-all hover:-translate-y-1 shadow-sm flex flex-col justify-between">
       <div>
-        <div class="w-13 h-13 rounded-2xl bg-teal-50 border border-teal-200 text-3xl flex items-center justify-center mb-4 text-teal-600 group-hover:scale-110 transition-transform">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-teal-50 border border-teal-200 text-2xl sm:text-3xl flex items-center justify-center mb-3 text-teal-600 group-hover:scale-105 transition-transform">
           🤝
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-teal-600 transition-colors">Operadores y Agencias</h3>
-        <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-          Si contratas a alguien para manejar el apartamento: radicación con 10 días hábiles de anticipación, ARL, seguridad social mensual y límites de personal.
+        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5 group-hover:text-teal-600 transition-colors">Operadores y Agencias</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Si contratas a alguien para el aseo o check-in: aviso con 10 días hábiles de anticipación, ARL, seguridad social mensual.
         </p>
       </div>
-      <div class="mt-6 flex items-center text-xs font-bold text-teal-600 gap-1.5">
-        <span>Ver reglas para coanfitriones</span>
+      <div class="mt-4 flex items-center text-xs font-bold text-teal-600 gap-1.5">
+        <span>Ver reglas para intermediarios</span>
         <span class="group-hover:translate-x-1 transition-transform">→</span>
       </div>
     </a>
 
     <!-- Card 4: Prohibiciones y Multas -->
-    <a href="/reglas-multas" class="group bg-white border border-rose-100 hover:border-rose-300 rounded-3xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-rose-950/10 shadow-sm flex flex-col justify-between">
+    <a href="/reglas-multas" class="group bg-white border border-rose-100 hover:border-rose-300 rounded-2xl sm:rounded-3xl p-4 sm:p-6 transition-all hover:-translate-y-1 shadow-sm flex flex-col justify-between">
       <div>
-        <div class="w-13 h-13 rounded-2xl bg-rose-50 border border-rose-200 text-3xl flex items-center justify-center mb-4 text-rose-600 group-hover:scale-110 transition-transform">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-rose-50 border border-rose-200 text-2xl sm:text-3xl flex items-center justify-center mb-3 text-rose-600 group-hover:scale-105 transition-transform">
           ⚠️
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-rose-600 transition-colors">Prohibiciones y Multas</h3>
-        <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-          Ropa o toallas en balcones, código de vestimenta en recepción/ascensores, prohibición de mascotas, ruido y la matriz de sanciones económicas.
+        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5 group-hover:text-rose-600 transition-colors">Prohibiciones y Multas</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Ropa o toallas en balcones, código de vestimenta en recepción/ascensores, prohibición de mascotas y matriz de sanciones.
         </p>
       </div>
-      <div class="mt-6 flex items-center text-xs font-bold text-rose-600 gap-1.5">
-        <span>Revisar matriz de sanciones</span>
+      <div class="mt-4 flex items-center text-xs font-bold text-rose-600 gap-1.5">
+        <span>Revisar sanciones</span>
         <span class="group-hover:translate-x-1 transition-transform">→</span>
       </div>
     </a>
 
     <!-- Card 5: Plantillas Rápidas -->
-    <a href="/plantillas" class="group bg-white border border-amber-100 hover:border-amber-300 rounded-3xl p-6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-950/10 shadow-sm flex flex-col justify-between">
+    <a href="/plantillas" class="group bg-white border border-amber-100 hover:border-amber-300 rounded-2xl sm:rounded-3xl p-4 sm:p-6 transition-all hover:-translate-y-1 shadow-sm flex flex-col justify-between">
       <div>
-        <div class="w-13 h-13 rounded-2xl bg-amber-50 border border-amber-200 text-3xl flex items-center justify-center mb-4 text-amber-600 group-hover:scale-110 transition-transform">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-amber-50 border border-amber-200 text-2xl sm:text-3xl flex items-center justify-center mb-3 text-amber-600 group-hover:scale-105 transition-transform">
           ✉️
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition-colors">Plantillas y Mensajes</h3>
-        <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
-          Copia y pega con un clic: correo a administración de vehículo 48h antes, carta de radicación de fumigación y mensaje preventivo para tus huéspedes.
+        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1.5 group-hover:text-amber-600 transition-colors">Plantillas y Mensajes</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Copia y pega con un clic: correo a administración de vehículo 48h antes, carta de fumigación y mensaje para tus huéspedes.
         </p>
       </div>
-      <div class="mt-6 flex items-center text-xs font-bold text-amber-600 gap-1.5">
-        <span>Copiar plantillas oficiales</span>
+      <div class="mt-4 flex items-center text-xs font-bold text-amber-600 gap-1.5">
+        <span>Copiar plantillas</span>
         <span class="group-hover:translate-x-1 transition-transform">→</span>
       </div>
     </a>
 
     <!-- Card 6: Calendario Periódico -->
-    <div class="bg-gradient-to-br from-sky-50 via-white to-amber-50/60 border border-sky-200/80 rounded-3xl p-6 shadow-sm flex flex-col justify-between">
+    <div class="bg-gradient-to-br from-sky-50 via-white to-amber-50/60 border border-sky-200/80 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-sm flex flex-col justify-between">
       <div>
-        <div class="w-13 h-13 rounded-2xl bg-amber-100 text-amber-700 text-3xl flex items-center justify-center mb-4">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-amber-100 text-amber-700 text-2xl sm:text-3xl flex items-center justify-center mb-3">
           🗓️
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-3">Calendario Periódico</h3>
-        <ul class="text-xs text-slate-700 space-y-2.5">
+        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2">Calendario Periódico</h3>
+        <ul class="text-xs text-slate-700 space-y-2">
           <li class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+            <span class="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
             <span><strong class="text-slate-900">Cada 3 meses:</strong> Fumigación y radicación.</span>
           </li>
           <li class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-teal-500"></span>
-            <span><strong class="text-slate-900">Días 1 a 10 de mes:</strong> ARL de operador.</span>
+            <span class="w-2 h-2 rounded-full bg-teal-500 shrink-0"></span>
+            <span><strong class="text-slate-900">Días 1 a 10:</strong> ARL de operador.</span>
           </li>
           <li class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-sky-500"></span>
-            <span><strong class="text-slate-900">Mensual:</strong> Pago cuota de administración.</span>
+            <span class="w-2 h-2 rounded-full bg-sky-500 shrink-0"></span>
+            <span><strong class="text-slate-900">Mensual:</strong> Pago administración.</span>
           </li>
           <li class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
-            <span><strong class="text-slate-900">Anual:</strong> Renovación póliza y RNT.</span>
+            <span class="w-2 h-2 rounded-full bg-indigo-500 shrink-0"></span>
+            <span><strong class="text-slate-900">Anual:</strong> Póliza y RNT.</span>
           </li>
         </ul>
       </div>
-      <div class="text-[11px] text-slate-500 pt-4 border-t border-slate-200/80">
+      <div class="text-[10px] text-slate-500 pt-3 border-t border-slate-200/80 mt-3">
         Mantén estos 4 hitos al día para asegurar tu operación.
       </div>
     </div>
@@ -315,7 +315,7 @@ import Layout from '../layouts/Layout.astro';
       const pct = Math.round((completed / keys.length) * 100);
       const text = document.getElementById('progress-text');
       const bar = document.getElementById('progress-bar');
-      if (text) text.textContent = `${completed} de ${keys.length} completados (${pct}%)`;
+      if (text) text.textContent = `${completed} de ${keys.length} (${pct}%)`;
       if (bar) bar.style.width = `${pct}%`;
     }
 

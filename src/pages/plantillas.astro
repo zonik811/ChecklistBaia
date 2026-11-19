@@ -6,332 +6,332 @@ import Layout from '../layouts/Layout.astro';
   title="Generador de Comunicaciones Rápidas" 
   subtitle="Diligencia los campos y el sistema generará automáticamente los textos oficiales listos con tus datos. ¡Solo llenar y copiar con un clic!"
 >
-  <div class="space-y-10">
+  <div class="space-y-6 sm:space-y-10">
 
     <!-- BARRA GLOBAL DE DATOS DEL PROPIETARIO (Persistente en localStorage) -->
-    <div class="bg-gradient-to-r from-sky-500/10 via-cyan-500/10 to-teal-500/10 border-2 border-sky-200 rounded-3xl p-6 sm:p-7 shadow-md">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-sky-200/80 mb-5">
-        <div class="flex items-center gap-3">
-          <span class="text-3xl">👤</span>
+    <div class="bg-gradient-to-r from-sky-500/10 via-cyan-500/10 to-teal-500/10 border-2 border-sky-200 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-sm">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3 sm:pb-4 border-b border-sky-200/80 mb-4 sm:mb-5">
+        <div class="flex items-center gap-2.5">
+          <span class="text-2xl sm:text-3xl shrink-0">👤</span>
           <div>
-            <h2 class="text-lg sm:text-xl font-black text-slate-900">Tus Datos Frecuentes de Propietario</h2>
-            <p class="text-xs text-slate-600">Llénalos una sola vez; se guardan en tu navegador y se aplican a todas las plantillas automáticamente.</p>
+            <h2 class="text-base sm:text-xl font-black text-slate-900">Tus Datos Frecuentes de Propietario</h2>
+            <p class="text-[11px] sm:text-xs text-slate-600">Llénalos una sola vez; se guardan en tu navegador automáticamente.</p>
           </div>
         </div>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-teal-100 text-teal-800 self-start sm:self-auto">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-teal-100 text-teal-800 self-start sm:self-auto shrink-0">
           💾 Guardado Automático
         </span>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 text-xs">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5 sm:gap-3.5 text-xs">
         <div>
-          <label class="font-bold text-slate-700 block mb-1">Tu Nombre Completo</label>
+          <label class="font-bold text-slate-700 block mb-1 text-[11px]">Tu Nombre Completo</label>
           <input 
             type="text" 
             id="owner-name" 
             placeholder="Ej: Oscar Pérez" 
-            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium focus:ring-2 focus:ring-sky-500 focus:outline-none"
+            class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none"
           />
         </div>
         <div>
-          <label class="font-bold text-slate-700 block mb-1">Cédula de Ciudadanía</label>
+          <label class="font-bold text-slate-700 block mb-1 text-[11px]">Cédula de Ciudadanía</label>
           <input 
             type="text" 
             id="owner-id" 
             placeholder="Ej: 1.098.765.432" 
-            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium focus:ring-2 focus:ring-sky-500 focus:outline-none"
+            class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none"
           />
         </div>
         <div>
-          <label class="font-bold text-slate-700 block mb-1">Teléfono de Contacto</label>
+          <label class="font-bold text-slate-700 block mb-1 text-[11px]">Teléfono de Contacto</label>
           <input 
             type="tel" 
             id="owner-phone" 
             placeholder="Ej: 300 123 4567" 
-            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium focus:ring-2 focus:ring-sky-500 focus:outline-none"
+            class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none"
           />
         </div>
         <div>
-          <label class="font-bold text-slate-700 block mb-1">Apartamento / Torre</label>
+          <label class="font-bold text-slate-700 block mb-1 text-[11px]">Apartamento / Torre</label>
           <input 
             type="text" 
             id="owner-apto" 
             placeholder="Ej: Torre 2 Apto 504" 
-            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium focus:ring-2 focus:ring-sky-500 focus:outline-none"
+            class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none"
           />
         </div>
         <div>
-          <label class="font-bold text-slate-700 block mb-1">Parqueadero Asignado</label>
+          <label class="font-bold text-slate-700 block mb-1 text-[11px]">Parqueadero Asignado</label>
           <input 
             type="text" 
             id="owner-parking" 
             placeholder="Ej: Sótano 1 - No. 42" 
-            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium focus:ring-2 focus:ring-sky-500 focus:outline-none"
+            class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs focus:ring-2 focus:ring-sky-500 focus:outline-none"
           />
         </div>
       </div>
     </div>
 
     <!-- PLANTILLA 1: REPORTE 48H ANTES (Vehículo y Llegada) -->
-    <div class="bg-white border-2 border-amber-100 rounded-3xl p-6 sm:p-8 shadow-lg shadow-amber-950/5">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100 mb-5">
+    <div class="bg-white border-2 border-amber-100 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-sm">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-slate-100 mb-4 sm:mb-5">
         <div>
           <div class="flex items-center gap-2 mb-1">
-            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-800">Trámite 48h Antes</span>
-            <span class="text-xs font-mono text-slate-400">Art. 4.3 & Art. 5</span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">Trámite 48h Antes</span>
+            <span class="text-[10px] sm:text-xs font-mono text-slate-400">Art. 4.3 & Art. 5</span>
           </div>
-          <h2 class="text-xl font-black text-slate-900">1. Notificación de Vehículo y Horario de Llegada</h2>
+          <h2 class="text-base sm:text-xl font-black text-slate-900 leading-tight">1. Notificación de Vehículo y Llegada</h2>
         </div>
         <button 
           onclick="copyGeneratedText('output-vehiculo', this)" 
-          class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-600 hover:to-amber-500 text-white font-bold text-xs flex items-center gap-1.5 transition-all self-start sm:self-auto shadow-md shadow-amber-500/25 cursor-pointer"
+          class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-md shadow-amber-500/20 active:scale-95 cursor-pointer shrink-0"
         >
           <span>📋</span> Copiar Correo Listo
         </button>
       </div>
 
       <!-- Inputs específicos de la reserva -->
-      <div class="bg-amber-50/60 border border-amber-200/80 rounded-2xl p-4 sm:p-5 mb-5 text-xs">
-        <h4 class="font-bold text-amber-900 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+      <div class="bg-amber-50/60 border border-amber-200/80 rounded-xl sm:rounded-2xl p-3.5 sm:p-5 mb-4 text-xs">
+        <h4 class="font-bold text-amber-900 uppercase tracking-wider mb-2.5 flex items-center gap-1.5 text-[11px]">
           <span>✍️</span> Ingresa los datos de esta reserva:
         </h4>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3">
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Nombre Huésped Principal</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Nombre Huésped Principal</label>
             <input 
               type="text" 
               id="res-guest-name" 
               placeholder="Ej: Carlos Ramírez" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Cédula / Pasaporte Huésped</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Cédula / Pasaporte</label>
             <input 
               type="text" 
               id="res-guest-id" 
-              placeholder="Ej: CC 80.123.456 / Pasaporte" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: CC 80.123.456" 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Número Total de Huéspedes</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Número de Personas</label>
             <input 
               type="number" 
               id="res-guest-count" 
-              placeholder="Ej: 4 personas" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: 4" 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Fecha y Hora Llegada (Check-in)</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Llegada (Check-in)</label>
             <input 
               type="text" 
               id="res-checkin" 
-              placeholder="Ej: 22 de Noviembre - 3:00 PM" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: 22 Nov - 3:00 PM" 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Fecha y Hora Salida (Check-out)</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Salida (Check-out)</label>
             <input 
               type="text" 
               id="res-checkout" 
-              placeholder="Ej: 26 de Noviembre - 11:00 AM" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: 26 Nov - 11:00 AM" 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Placa del Carro (Máx 1)</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Placa del Carro (Máx 1)</label>
             <input 
               type="text" 
               id="res-car-plate" 
-              placeholder="Ej: XYZ-789 (o 'Sin Vehículo')" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: XYZ-789 (o Sin Carro)" 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div class="sm:col-span-2 lg:col-span-3">
-            <label class="font-semibold text-slate-700 block mb-1">Modelo, Color y Conductor</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Vehículo, Color y Conductor</label>
             <input 
               type="text" 
               id="res-car-desc" 
-              placeholder="Ej: Toyota Fortuner Gris Oscuro - Conductor: Carlos Ramírez" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: Toyota Fortuner Gris - Conductor: Carlos Ramírez" 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
         </div>
       </div>
 
-      <!-- Preview interactivo en tiempo real -->
+      <!-- Preview adaptado a móvil (con altura controlada y scroll limpio) -->
       <div class="relative">
-        <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Vista Previa Generada en Tiempo Real:</span>
-        <pre id="output-vehiculo" class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-800 font-mono overflow-x-auto whitespace-pre-wrap leading-relaxed shadow-inner"></pre>
+        <span class="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Vista Previa Generada:</span>
+        <pre id="output-vehiculo" class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 text-[11px] sm:text-xs text-slate-800 font-mono whitespace-pre-wrap break-words leading-relaxed max-h-60 sm:max-h-80 overflow-y-auto"></pre>
       </div>
     </div>
 
     <!-- PLANTILLA 2: RADICACIÓN DE FUMIGACIÓN TRIMESTRAL -->
-    <div class="bg-white border-2 border-teal-100 rounded-3xl p-6 sm:p-8 shadow-lg shadow-teal-950/5">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100 mb-5">
+    <div class="bg-white border-2 border-teal-100 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-sm">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-slate-100 mb-4 sm:mb-5">
         <div>
           <div class="flex items-center gap-2 mb-1">
-            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-teal-100 text-teal-800">Trámite Trimestral</span>
-            <span class="text-xs font-mono text-slate-400">Art. 7.3</span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-teal-100 text-teal-800">Trámite Trimestral</span>
+            <span class="text-[10px] sm:text-xs font-mono text-slate-400">Art. 7.3</span>
           </div>
-          <h2 class="text-xl font-black text-slate-900">2. Radicación de Certificado de Fumigación</h2>
+          <h2 class="text-base sm:text-xl font-black text-slate-900 leading-tight">2. Radicación Certificado de Fumigación</h2>
         </div>
         <button 
           onclick="copyGeneratedText('output-fumigacion', this)" 
-          class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-teal-500 to-emerald-400 hover:from-teal-600 hover:to-emerald-500 text-white font-bold text-xs flex items-center gap-1.5 transition-all self-start sm:self-auto shadow-md shadow-teal-500/25 cursor-pointer"
+          class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-gradient-to-r from-teal-500 to-emerald-400 hover:from-teal-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-md shadow-teal-500/20 active:scale-95 cursor-pointer shrink-0"
         >
           <span>📋</span> Copiar Carta Lista
         </button>
       </div>
 
       <!-- Inputs específicos de fumigación -->
-      <div class="bg-teal-50/60 border border-teal-200/80 rounded-2xl p-4 sm:p-5 mb-5 text-xs">
-        <h4 class="font-bold text-teal-900 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+      <div class="bg-teal-50/60 border border-teal-200/80 rounded-xl sm:rounded-2xl p-3.5 sm:p-5 mb-4 text-xs">
+        <h4 class="font-bold text-teal-900 uppercase tracking-wider mb-2.5 flex items-center gap-1.5 text-[11px]">
           <span>✍️</span> Datos del certificado de fumigación:
         </h4>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Empresa de Fumigación</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Empresa Fumigadora</label>
             <input 
               type="text" 
               id="fumi-company" 
-              placeholder="Ej: Fumigaciones del Caribe SAS" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: Fumigaciones del Caribe" 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">NIT o Registro</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">NIT o Registro</label>
             <input 
               type="text" 
               id="fumi-nit" 
               placeholder="Ej: 900.123.456-7" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Fecha de Fumigación</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Fecha Fumigación</label>
             <input 
               type="text" 
               id="fumi-date" 
-              placeholder="Ej: 15 de Noviembre de 2026" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: 15 Noviembre 2026" 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Próximo Vencimiento (3 Meses)</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Próximo Vencimiento (3 Meses)</label>
             <input 
               type="text" 
               id="fumi-next" 
-              placeholder="Ej: 15 de Febrero de 2027" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: 15 Febrero 2027" 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
         </div>
       </div>
 
       <div class="relative">
-        <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Vista Previa Generada en Tiempo Real:</span>
-        <pre id="output-fumigacion" class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-800 font-mono overflow-x-auto whitespace-pre-wrap leading-relaxed shadow-inner"></pre>
+        <span class="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Vista Previa Generada:</span>
+        <pre id="output-fumigacion" class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 text-[11px] sm:text-xs text-slate-800 font-mono whitespace-pre-wrap break-words leading-relaxed max-h-60 sm:max-h-80 overflow-y-auto"></pre>
       </div>
     </div>
 
-    <!-- PLANTILLA 3: REGISTRO DE OPERADOR O COANFITRIÓN (10 días antes) -->
-    <div class="bg-white border-2 border-sky-100 rounded-3xl p-6 sm:p-8 shadow-lg shadow-sky-950/5">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100 mb-5">
+    <!-- PLANTILLA 3: REGISTRO DE OPERADOR O COANFITRIÓN -->
+    <div class="bg-white border-2 border-sky-100 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-sm">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-slate-100 mb-4 sm:mb-5">
         <div>
           <div class="flex items-center gap-2 mb-1">
-            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-sky-100 text-sky-800">Aviso 10 Días Antes</span>
-            <span class="text-xs font-mono text-slate-400">Art. 6</span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-sky-100 text-sky-800">Aviso 10 Días Antes</span>
+            <span class="text-[10px] sm:text-xs font-mono text-slate-400">Art. 6</span>
           </div>
-          <h2 class="text-xl font-black text-slate-900">3. Presentación y Registro de Operador / Agencia</h2>
+          <h2 class="text-base sm:text-xl font-black text-slate-900 leading-tight">3. Registro de Operador / Agencia</h2>
         </div>
         <button 
           onclick="copyGeneratedText('output-operador', this)" 
-          class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 hover:to-cyan-600 text-white font-bold text-xs flex items-center gap-1.5 transition-all self-start sm:self-auto shadow-md shadow-sky-500/25 cursor-pointer"
+          class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-md shadow-sky-500/20 active:scale-95 cursor-pointer shrink-0"
         >
           <span>📋</span> Copiar Carta Lista
         </button>
       </div>
 
       <!-- Inputs del operador -->
-      <div class="bg-sky-50/60 border border-sky-200/80 rounded-2xl p-4 sm:p-5 mb-5 text-xs">
-        <h4 class="font-bold text-sky-900 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+      <div class="bg-sky-50/60 border border-sky-200/80 rounded-xl sm:rounded-2xl p-3.5 sm:p-5 mb-4 text-xs">
+        <h4 class="font-bold text-sky-900 uppercase tracking-wider mb-2.5 flex items-center gap-1.5 text-[11px]">
           <span>✍️</span> Datos de la agencia o administrador delegado:
         </h4>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Nombre Agencia / Operador</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Nombre Agencia / Operador</label>
             <input 
               type="text" 
               id="op-agency" 
-              placeholder="Ej: Cartagena Host Pro SAS" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: Cartagena Host Pro" 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">NIT o Cédula Operador</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">NIT o Cédula Operador</label>
             <input 
               type="text" 
               id="op-nit" 
               placeholder="Ej: 901.876.543-1" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Línea Telefónica 24 Horas</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Teléfono 24 Horas</label>
             <input 
               type="tel" 
               id="op-phone" 
-              placeholder="Ej: 310 987 6543 (Atención 24/7)" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: 310 987 6543" 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
           <div>
-            <label class="font-semibold text-slate-700 block mb-1">Persona Autorizada Entrega (Art. 6.3)</label>
+            <label class="font-semibold text-slate-700 block mb-1 text-[11px]">Persona Encargada Entrega</label>
             <input 
               type="text" 
               id="op-staff" 
-              placeholder="Ej: María Gómez - CC 1.047.890.123" 
-              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium"
+              placeholder="Ej: María Gómez - CC 1.047..." 
+              class="w-full px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-900 font-medium text-xs"
             />
           </div>
         </div>
       </div>
 
       <div class="relative">
-        <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Vista Previa Generada en Tiempo Real:</span>
-        <pre id="output-operador" class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-800 font-mono overflow-x-auto whitespace-pre-wrap leading-relaxed shadow-inner"></pre>
+        <span class="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Vista Previa Generada:</span>
+        <pre id="output-operador" class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 text-[11px] sm:text-xs text-slate-800 font-mono whitespace-pre-wrap break-words leading-relaxed max-h-60 sm:max-h-80 overflow-y-auto"></pre>
       </div>
     </div>
 
-    <!-- PLANTILLA 4: MENSAJE DE WHATSAPP AL HUÉSPED (Blindaje ante multas) -->
-    <div class="bg-white border-2 border-cyan-100 rounded-3xl p-6 sm:p-8 shadow-lg shadow-cyan-950/5">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100 mb-5">
+    <!-- PLANTILLA 4: MENSAJE DE WHATSAPP AL HUÉSPED -->
+    <div class="bg-white border-2 border-cyan-100 rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-sm">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 sm:pb-4 border-b border-slate-100 mb-4 sm:mb-5">
         <div>
           <div class="flex items-center gap-2 mb-1">
-            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-cyan-100 text-cyan-800">Para WhatsApp / Airbnb</span>
-            <span class="text-xs font-mono text-slate-400">Blindaje de Convivencia</span>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-cyan-100 text-cyan-800">WhatsApp / Airbnb</span>
+            <span class="text-[10px] sm:text-xs font-mono text-slate-400">Blindaje de Convivencia</span>
           </div>
-          <h2 class="text-xl font-black text-slate-900">4. Mensaje Preventivo de Bienvenida al Huésped</h2>
+          <h2 class="text-base sm:text-xl font-black text-slate-900 leading-tight">4. Mensaje Preventivo al Huésped</h2>
         </div>
         <button 
           onclick="copyGeneratedText('output-huesped', this)" 
-          class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-cyan-500 to-teal-400 hover:from-cyan-600 hover:to-teal-500 text-white font-bold text-xs flex items-center gap-1.5 transition-all self-start sm:self-auto shadow-md shadow-cyan-500/25 cursor-pointer"
+          class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-teal-400 hover:from-cyan-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-all shadow-md shadow-cyan-500/20 active:scale-95 cursor-pointer shrink-0"
         >
           <span>💬</span> Copiar WhatsApp Listo
         </button>
       </div>
 
-      <p class="text-xs sm:text-sm text-slate-600 mb-4">
-        Este mensaje toma automáticamente el nombre del huésped ingresado arriba y tus datos de anfitrión para que lo pegues en WhatsApp o en el chat de Airbnb en 2 segundos.
+      <p class="text-xs text-slate-600 mb-3">
+        Se alimenta solo con el nombre del huésped y tus datos de anfitrión para que lo pegues en WhatsApp o Airbnb en 2 segundos.
       </p>
 
       <div class="relative">
-        <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Mensaje Listo para Pegar en WhatsApp:</span>
-        <pre id="output-huesped" class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-800 font-mono overflow-x-auto whitespace-pre-wrap leading-relaxed shadow-inner"></pre>
+        <span class="text-[10px] sm:text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-1">Mensaje Listo para Pegar en WhatsApp:</span>
+        <pre id="output-huesped" class="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 text-[11px] sm:text-xs text-slate-800 font-mono whitespace-pre-wrap break-words leading-relaxed max-h-60 sm:max-h-80 overflow-y-auto"></pre>
       </div>
     </div>
 
@@ -339,16 +339,9 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- SCRIPT GENERADOR EN TIEMPO REAL -->
   <script is:inline>
-    // Lista de campos de Propietario (Persistentes)
     const ownerFields = ['owner-name', 'owner-id', 'owner-phone', 'owner-apto', 'owner-parking'];
-    
-    // Lista de campos de Reserva
     const resFields = ['res-guest-name', 'res-guest-id', 'res-guest-count', 'res-checkin', 'res-checkout', 'res-car-plate', 'res-car-desc'];
-    
-    // Lista de campos de Fumigación
     const fumiFields = ['fumi-company', 'fumi-nit', 'fumi-date', 'fumi-next'];
-    
-    // Lista de campos de Operador
     const opFields = ['op-agency', 'op-nit', 'op-phone', 'op-staff'];
 
     const allInputs = [...ownerFields, ...resFields, ...fumiFields, ...opFields];
@@ -362,22 +355,18 @@ import Layout from '../layouts/Layout.astro';
       }
     });
 
-    // Función que recompila todas las plantillas en vivo
     function renderTemplates() {
-      // Valores Propietario
       const oName = document.getElementById('owner-name')?.value.trim() || '[Tu Nombre Completo]';
       const oId = document.getElementById('owner-id')?.value.trim() || '[Tu Cédula]';
       const oPhone = document.getElementById('owner-phone')?.value.trim() || '[Tu Teléfono]';
       const oApto = document.getElementById('owner-apto')?.value.trim() || '[Número de Apto]';
       const oParking = document.getElementById('owner-parking')?.value.trim() || '[Parqueadero Asignado]';
 
-      // Guardar en localStorage los del propietario
       ownerFields.forEach(id => {
         const val = document.getElementById(id)?.value || '';
         localStorage.setItem(id, val);
       });
 
-      // Valores Reserva
       const gName = document.getElementById('res-guest-name')?.value.trim() || '[Nombre del Huésped]';
       const gId = document.getElementById('res-guest-id')?.value.trim() || '[Cédula / Pasaporte]';
       const gCount = document.getElementById('res-guest-count')?.value.trim() || '[Cantidad de personas]';
@@ -386,19 +375,16 @@ import Layout from '../layouts/Layout.astro';
       const gPlate = document.getElementById('res-car-plate')?.value.trim() || '[PLACA]';
       const gCarDesc = document.getElementById('res-car-desc')?.value.trim() || '[Modelo, Color y Conductor]';
 
-      // Valores Fumigación
       const fCompany = document.getElementById('fumi-company')?.value.trim() || '[Nombre Empresa Fumigadora]';
       const fNit = document.getElementById('fumi-nit')?.value.trim() || '[NIT de la Empresa]';
       const fDate = document.getElementById('fumi-date')?.value.trim() || '[Fecha de Servicio]';
       const fNext = document.getElementById('fumi-next')?.value.trim() || '[Fecha en 3 Meses]';
 
-      // Valores Operador
       const opAgency = document.getElementById('op-agency')?.value.trim() || '[Nombre Agencia / Operador]';
       const opNit = document.getElementById('op-nit')?.value.trim() || '[NIT / Cédula]';
       const opPhone = document.getElementById('op-phone')?.value.trim() || '[Teléfono 24 Horas]';
       const opStaff = document.getElementById('op-staff')?.value.trim() || '[Nombre y Cédula Persona Autorizada]';
 
-      // 1. Plantilla Vehículo y Check-in
       const tplVehiculo = `Asunto: Notificación de Reserva e Ingreso Vehicular 48H - Apto ${oApto} - Conjunto Baia Kabo
 
 Señores
@@ -437,7 +423,6 @@ C.C. ${oId}
 Propietario Apartamento ${oApto}
 Teléfono: ${oPhone}`;
 
-      // 2. Plantilla Fumigación
       const tplFumigacion = `Asunto: Radicación Certificado de Fumigación Trimestral - Apto ${oApto} - Conjunto Baia Kabo
 
 Señores
@@ -468,7 +453,6 @@ C.C. ${oId}
 Propietario Apartamento ${oApto}
 Teléfono: ${oPhone}`;
 
-      // 3. Plantilla Operador
       const tplOperador = `Asunto: Solicitud de Registro de Intermediario Turístico - Apto ${oApto} - Conjunto Baia Kabo
 
 Señores
@@ -503,7 +487,6 @@ C.C. ${oId}
 Propietario Apartamento ${oApto}
 Teléfono: ${oPhone}`;
 
-      // 4. Plantilla Huésped
       const tplHuesped = `¡Hola ${gName}! Qué alegría darte la bienvenida a nuestro apartamento en Cartagena (${oApto}).
 
 Para que tu ingreso y registro en portería sea inmediato y sin contratiempos, el Conjunto Residencial exige el cumplimiento estricto de las siguientes normas de copropiedad:
@@ -532,7 +515,6 @@ Si viajas en carro, por favor confírmanos la placa con MÍNIMO 48 HORAS de anti
 
 ¡Estamos atentos para que pases unas vacaciones espectaculares! Cualquier duda, me puedes contactar a mi teléfono: ${oPhone}.`;
 
-      // Renderizar en los <pre>
       const outVeh = document.getElementById('output-vehiculo');
       const outFum = document.getElementById('output-fumigacion');
       const outOp = document.getElementById('output-operador');
@@ -544,7 +526,6 @@ Si viajas en carro, por favor confírmanos la placa con MÍNIMO 48 HORAS de anti
       if (outHue) outHue.textContent = tplHuesped;
     }
 
-    // Escuchar cambios en todos los inputs
     allInputs.forEach(id => {
       const el = document.getElementById(id);
       if (el) {
@@ -552,25 +533,23 @@ Si viajas en carro, por favor confírmanos la placa con MÍNIMO 48 HORAS de anti
       }
     });
 
-    // Función de copiado con feedback visual
     function copyGeneratedText(elementId, btn) {
       const text = document.getElementById(elementId)?.innerText;
       if (!text) return;
 
       navigator.clipboard.writeText(text).then(() => {
         const origHtml = btn.innerHTML;
-        btn.innerHTML = '<span>✅</span> ¡Copiado con tus datos!';
-        btn.classList.add('ring-2', 'ring-emerald-400', 'bg-emerald-500');
+        btn.innerHTML = '<span>✅</span> ¡Copiado listo!';
+        btn.classList.add('bg-emerald-500');
         setTimeout(() => {
           btn.innerHTML = origHtml;
-          btn.classList.remove('ring-2', 'ring-emerald-400', 'bg-emerald-500');
+          btn.classList.remove('bg-emerald-500');
         }, 2500);
       }).catch(err => {
         alert('Error al copiar: ' + err);
       });
     }
 
-    // Render inicial
     renderTemplates();
   </script>
 </Layout>
