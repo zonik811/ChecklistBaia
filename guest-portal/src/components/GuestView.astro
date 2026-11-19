@@ -1,0 +1,338 @@
+---
+import type { GuideContent } from '../data/translations';
+import { apartmentConfig } from '../config/apartment.config';
+
+interface Props {
+  c: GuideContent;
+  lang: 'es' | 'en';
+}
+
+const { c, lang } = Astro.props;
+---
+
+<div class="space-y-12 sm:space-y-16">
+
+  <!-- HERO SECTION CON IMAGEN REAL -->
+  <section class="relative rounded-3xl overflow-hidden border-2 border-cyan-400 p-6 sm:p-12 shadow-2xl">
+    <!-- Foto real de Baia Kristal -->
+    <img 
+      src="/imagen1.webp" 
+      alt="Baia Kristal Cartagena" 
+      class="absolute inset-0 w-full h-full object-cover object-center scale-105" 
+    />
+    <!-- Capa de degradado caribeño para legibilidad -->
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-cyan-950/80 to-teal-950/75 backdrop-blur-[1px]"></div>
+
+    <div class="max-w-2xl relative z-10">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 mb-4 backdrop-blur-md">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        {c.hero.badge}
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4 drop-shadow-sm">
+        {c.hero.welcome}
+      </h1>
+      <p class="text-lg sm:text-xl font-medium text-cyan-200/95 mb-3 drop-shadow-sm">
+        {c.hero.apartmentName}
+      </p>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed mb-6 drop-shadow-sm">
+        {c.hero.tagline}
+      </p>
+      <div class="flex flex-wrap items-center gap-3">
+        <a 
+          href="#wifi" 
+          class="px-5 py-3 rounded-2xl bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-cyan-400/30 transition-all flex items-center gap-2"
+        >
+          <span>📶</span> {c.hero.quickWifi}
+        </a>
+        <a 
+          href="#rules" 
+          class="px-5 py-3 rounded-2xl bg-slate-900/80 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm border border-slate-700 transition-all flex items-center gap-2 backdrop-blur-md"
+        >
+          <span>📜</span> {c.nav.rules}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN WIFI -->
+  <section id="wifi" class="scroll-mt-24">
+    <div class="bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-cyan-950/40 border border-cyan-500/40 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-2xl font-bold">
+            📶
+          </div>
+          <div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white">{c.wifi.title}</h2>
+            <p class="text-xs sm:text-sm text-cyan-300/80">{c.wifi.subtitle}</p>
+          </div>
+        </div>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 self-start sm:self-auto">
+          ● Fibra Óptica 300 Mbps
+        </span>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <!-- Credenciales -->
+        <div class="space-y-4">
+          <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4">
+            <span class="text-xs text-slate-400 font-semibold block mb-1">{c.wifi.networkLabel}</span>
+            <div class="flex items-center justify-between">
+              <span id="wifi-ssid" class="font-mono text-base sm:text-lg font-bold text-white">{apartmentConfig.wifiNetwork}</span>
+              <button 
+                onclick={`copyText('${apartmentConfig.wifiNetwork}', this)`} 
+                class="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-cyan-300 transition-all border border-slate-700"
+              >
+                {c.wifi.copyButton}
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4">
+            <span class="text-xs text-slate-400 font-semibold block mb-1">{c.wifi.passwordLabel}</span>
+            <div class="flex items-center justify-between">
+              <span id="wifi-pass" class="font-mono text-base sm:text-lg font-bold text-cyan-300">{apartmentConfig.wifiPassword}</span>
+              <button 
+                onclick={`copyText('${apartmentConfig.wifiPassword}', this)`} 
+                class="px-3 py-1.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs transition-all shadow-md"
+              >
+                {c.wifi.copyButton}
+              </button>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-400 italic">💡 {c.wifi.tip}</p>
+        </div>
+
+        <!-- Tarjeta QR visual -->
+        <div class="bg-slate-950/90 border border-cyan-500/30 rounded-2xl p-6 text-center flex flex-col items-center justify-center">
+          <div class="w-36 h-36 bg-white p-3 rounded-2xl shadow-xl flex items-center justify-center mb-3">
+            <!-- QR code visual representation -->
+            <svg viewBox="0 0 100 100" class="w-full h-full text-slate-950 fill-current">
+              <rect x="0" y="0" width="30" height="30" rx="4" />
+              <rect x="5" y="5" width="20" height="20" rx="2" fill="#fff" />
+              <rect x="9" y="9" width="12" height="12" fill="#000" />
+              <rect x="70" y="0" width="30" height="30" rx="4" />
+              <rect x="75" y="5" width="20" height="20" rx="2" fill="#fff" />
+              <rect x="79" y="9" width="12" height="12" fill="#000" />
+              <rect x="0" y="70" width="30" height="30" rx="4" />
+              <rect x="5" y="75" width="20" height="20" rx="2" fill="#fff" />
+              <rect x="9" y="79" width="12" height="12" fill="#000" />
+              <rect x="40" y="10" width="8" height="25" />
+              <rect x="52" y="20" width="10" height="10" />
+              <rect x="40" y="45" width="20" height="10" />
+              <rect x="70" y="45" width="25" height="10" />
+              <rect x="40" y="65" width="15" height="25" />
+              <rect x="65" y="65" width="25" height="10" />
+              <rect x="75" y="80" width="15" height="15" />
+            </svg>
+          </div>
+          <span class="text-xs text-slate-400 font-medium">{c.wifi.qrHint}</span>
+          <span class="text-[11px] text-cyan-400 font-mono mt-1">WIFI:T:WPA;S:BaiaKabo_Guest_5G;P:CaribeKristal2026;;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORARIOS & PROCEDIMIENTOS -->
+  <section id="schedule" class="scroll-mt-24 space-y-6">
+    <div>
+      <h2 class="text-2xl font-bold text-white">{c.schedule.title}</h2>
+      <p class="text-xs sm:text-sm text-slate-400">{c.schedule.subtitle}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+      <!-- Checkin Card -->
+      <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 shadow-xl">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-2xl">🕒</span>
+          <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-cyan-500/20 text-cyan-300 font-mono">
+            {c.schedule.checkinTime}
+          </span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">{c.schedule.checkinTitle}</h3>
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">{c.schedule.checkinDesc}</p>
+      </div>
+
+      <!-- Checkout Card -->
+      <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 shadow-xl">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-2xl">🌅</span>
+          <span class="px-2.5 py-1 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 font-mono">
+            {c.schedule.checkoutTime}
+          </span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">{c.schedule.checkoutTitle}</h3>
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">{c.schedule.checkoutDesc}</p>
+      </div>
+
+      <!-- Manilla Obligatoria Card -->
+      <div class="bg-slate-900/70 border border-cyan-500/30 rounded-2xl p-6 shadow-xl">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-2xl">🎫</span>
+          <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-cyan-500/20 text-cyan-300">
+            {c.schedule.wristbandBadge}
+          </span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">{c.schedule.wristbandTitle}</h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">{c.schedule.wristbandDesc}</p>
+      </div>
+
+      <!-- Menores de Edad Card -->
+      <div class="bg-slate-900/70 border border-rose-500/30 rounded-2xl p-6 shadow-xl">
+        <div class="flex items-center justify-between mb-3">
+          <span class="text-2xl">👶</span>
+          <span class="px-2.5 py-1 rounded-full text-[11px] font-bold bg-rose-500/20 text-rose-300">
+            {c.schedule.minorsBadge}
+          </span>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">{c.schedule.minorsTitle}</h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">{c.schedule.minorsDesc}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NORMAS DE CONVIVENCIA -->
+  <section id="rules" class="scroll-mt-24 space-y-6">
+    <div>
+      <h2 class="text-2xl font-bold text-white">{c.rules.title}</h2>
+      <p class="text-xs sm:text-sm text-slate-400">{c.rules.subtitle}</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {c.rules.items.map(r => (
+        <div class="bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 rounded-2xl p-5 shadow-lg flex flex-col justify-between transition-all">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-2xl">{r.icon}</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-cyan-300 border border-slate-700">
+                {r.badge}
+              </span>
+            </div>
+            <h3 class="text-sm font-bold text-white mb-2">{r.title}</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">{r.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- LAGUNA KRISTAL -->
+  <section id="lagoon" class="scroll-mt-24">
+    <div class="bg-gradient-to-r from-teal-950/80 via-slate-900 to-cyan-950/70 border border-teal-500/40 rounded-3xl p-6 sm:p-10 shadow-2xl">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-3xl">🏊</span>
+        <div>
+          <h2 class="text-2xl font-bold text-white">{c.lagoon.title}</h2>
+          <p class="text-xs sm:text-sm text-teal-300">{c.lagoon.subtitle}</p>
+        </div>
+      </div>
+      
+      <div class="p-3.5 bg-slate-950/70 border border-teal-500/30 rounded-xl text-xs text-teal-200 font-semibold mb-6 inline-block">
+        🕒 {c.lagoon.hours}
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-xs font-bold text-white uppercase tracking-wider">{c.lagoon.rulesTitle}</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+          {c.lagoon.rules.map(rule => (
+            <div class="p-3 rounded-xl bg-slate-950/50 border border-slate-800/80 flex items-start gap-2.5">
+              <span class="text-teal-400 font-bold">✓</span>
+              <span>{rule}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LUGARES CERCANOS Y RECOMENDACIONES -->
+  <section id="nearby" class="scroll-mt-24 space-y-8">
+    <div>
+      <h2 class="text-2xl font-bold text-white">{c.nearby.title}</h2>
+      <p class="text-xs sm:text-sm text-slate-400">{c.nearby.subtitle}</p>
+    </div>
+
+    <div class="space-y-8">
+      {c.nearby.categories.map(cat => (
+        <div class="space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="text-xl">{cat.icon}</span>
+            <h3 class="text-base font-bold text-white">{cat.name}</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {cat.places.map(p => (
+              <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 shadow-lg flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-cyan-950/60 text-cyan-300 border border-cyan-800/40">
+                      {p.tag}
+                    </span>
+                    <span class="text-[11px] font-mono text-slate-400">{p.distance}</span>
+                  </div>
+                  <h4 class="text-sm font-bold text-white mb-1.5">{p.name}</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">{p.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CONTACTO & EMERGENCIAS -->
+  <section id="emergency" class="scroll-mt-24 space-y-6">
+    <div>
+      <h2 class="text-2xl font-bold text-white">{c.emergency.title}</h2>
+      <p class="text-xs sm:text-sm text-slate-400">{c.emergency.subtitle}</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {c.emergency.contacts.map(contact => (
+        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 flex flex-col justify-between shadow-lg">
+          <div>
+            <span class="text-xs font-semibold text-cyan-400 uppercase tracking-wider block mb-1">{contact.role}</span>
+            <h3 class="text-sm font-bold text-white mb-2">{contact.name}</h3>
+            <p class="text-xs text-slate-400 mb-4">{contact.notes}</p>
+          </div>
+          <div>
+            {contact.whatsapp ? (
+              <a 
+                href={`https://wa.me/${apartmentConfig.hostWhatsappClean}?text=Hola!%20Soy%20huésped%20de%20Baia%20Kabo`}
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="w-full py-2 px-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 shadow-md transition-all"
+              >
+                <span>💬</span> WhatsApp Directo
+              </a>
+            ) : (
+              <a 
+                href={`tel:${contact.phone}`} 
+                class="w-full py-2 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-cyan-300 font-bold text-xs flex items-center justify-center gap-1.5 border border-slate-700 transition-all"
+              >
+                <span>📞</span> {contact.phone}
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+</div>
+
+<script is:inline>
+  function copyText(str, buttonEl) {
+    navigator.clipboard.writeText(str).then(() => {
+      const orig = buttonEl.innerText;
+      buttonEl.innerText = '✓ ¡Copiado!';
+      buttonEl.classList.add('bg-emerald-400');
+      setTimeout(() => {
+        buttonEl.innerText = orig;
+        buttonEl.classList.remove('bg-emerald-400');
+      }, 2000);
+    });
+  }
+</script>

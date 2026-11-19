@@ -1,0 +1,188 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const prohibiciones = [
+  {
+    num: "8.9",
+    icono: "🚫",
+    titulo: "Uso de Marca 'Baia Kristal'",
+    descripcion: "Prohibido usar la marca 'Baia Kristal' en fotos, títulos o descripciones publicitarias en Airbnb, Booking, redes sociales o folletos comerciales.",
+    tipo: "Comercial / Legal"
+  },
+  {
+    num: "8.4",
+    icono: "🩱",
+    titulo: "Fachadas, Balcones y Ropa Colgada",
+    descripcion: "Prohibido colgar ropa, toallas o tendederos en barandas o balcones. Prohibido instalar BBQ, parasoles, luces de colores, parlantes o avisos exteriores.",
+    tipo: "Estética y Fachada"
+  },
+  {
+    num: "8.7",
+    icono: "👔",
+    titulo: "Código de Vestimenta en Zonas Comunes",
+    descripcion: "Prohibido transitar por recepción y pasillos sin camisa, descalzos, destilando agua o en vestido de baño sin pareo. Exige toalla seca antes de salir de la piscina.",
+    tipo: "Convivencia"
+  },
+  {
+    num: "8.6",
+    icono: "🛗",
+    titulo: "Ascensores: Cero Agua y Cero Arena",
+    descripcion: "Prohibido ingresar a los ascensores goteando agua o con los pies/cuerpo impregnados de arena de playa o laguna. Debe retirarse la arena antes de subir.",
+    tipo: "Mantenimiento"
+  },
+  {
+    num: "8.8",
+    icono: "🐕",
+    titulo: "Mascotas de Huéspedes Prohibidas",
+    descripcion: "No está permitido el ingreso de mascotas a los huéspedes del apartamento, salvo aquellas estrictamente certificadas por prescripción médica (soporte emocional/lazarillo).",
+    tipo: "Mascotas"
+  },
+  {
+    num: "8.3",
+    icono: "🎺",
+    titulo: "Música, Orquestas y Ruido",
+    descripcion: "Prohibido el ingreso de orquestas o conjuntos musicales. Prohibidos bafles o música a volumen que perturbe la tranquilidad y el descanso de otros residentes.",
+    tipo: "Ruido"
+  },
+  {
+    num: "8.11",
+    icono: "🏖️",
+    titulo: "Comercialización de Pasadías",
+    descripcion: "Prohibido cobrar por pasadías o permitir el ingreso de personas para pasar solo el día en la piscina o la laguna. Estadía mínima obligatoria: 1 noche.",
+    tipo: "Uso Turístico"
+  },
+  {
+    num: "8.1",
+    icono: "⚖️",
+    titulo: "Cero Prostitución y Explotación",
+    descripcion: "Totalmente prohibida toda modalidad de prostitución o explotación sexual en las unidades. Denuncia penal inmediata ante la Policía Nacional.",
+    tipo: "Ley Penal"
+  },
+  {
+    num: "8.5",
+    icono: "🗑️",
+    titulo: "Separación y Depósito de Basuras",
+    descripcion: "Basuras en bolsas bien cerradas en el cuarto de cada piso. Obligatorio separar cartón, vidrio y latas en bolsas independientes.",
+    tipo: "Medio Ambiente"
+  }
+];
+
+const multas = [
+  {
+    infraccion: "Huésped sin manilla de identificación",
+    base: "Art. 9.1",
+    sancion: "COP $100.000 por día",
+    detalle: "Por cada huésped sin manilla. Se factura en el recibo de administración."
+  },
+  {
+    infraccion: "Falta de fumigación trimestral certificada",
+    base: "Art. 7.3",
+    sancion: "1 Expensa Mensual Completa",
+    detalle: "Equivale a 1 cuota ordinaria de administración + reporte sancionatorio a DADIS/EPA."
+  },
+  {
+    infraccion: "Daños a bienes comunes causados por huéspedes",
+    base: "Art. 7.4",
+    sancion: "100% del costo de reparación",
+    detalle: "Se cobra al propietario en el recibo de administración del mes siguiente."
+  },
+  {
+    infraccion: "Interferir en el negocio de otro operador",
+    base: "Art. 9.3",
+    sancion: "Media (0.5) Expensa Mensual",
+    detalle: "Si tu operador intenta quitarle clientes a otro operador en la recepción."
+  },
+  {
+    infraccion: "3 Infracciones acumuladas por tu operador",
+    base: "Art. 6 - P1",
+    sancion: "Expulsión y veto definitivo del conjunto",
+    detalle: "El Consejo de Administración revoca el permiso de ingreso sin derecho a apelación."
+  }
+];
+---
+
+<Layout 
+  title="Prohibiciones y Matriz de Sanciones" 
+  subtitle="Las reglas taxativas del Conjunto Residencial Baia Kabo y las consecuencias económicas aplicables al propietario."
+>
+  <div class="space-y-10">
+    
+    <!-- Tabla de Multas Económicas -->
+    <div class="bg-white border-2 border-rose-100 rounded-3xl p-6 sm:p-8 shadow-lg shadow-rose-950/5">
+      <div class="flex items-center gap-3 pb-4 border-b border-rose-100 mb-6">
+        <span class="text-3xl">💸</span>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900">Matriz de Sanciones y Multas Económicas</h2>
+          <p class="text-xs sm:text-sm text-slate-500">El propietario responde solidariamente con su patrimonio por cualquier falta de sus huéspedes u operadores.</p>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-slate-200 bg-slate-50 text-slate-600">
+              <th class="py-3 px-4 font-bold rounded-l-xl">Infracción / Causa</th>
+              <th class="py-3 px-4 font-bold">Artículo</th>
+              <th class="py-3 px-4 font-bold text-rose-600">Monto / Sanción</th>
+              <th class="py-3 px-4 font-bold rounded-r-xl">Consecuencia</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            {multas.map(m => (
+              <tr class="hover:bg-sky-50/40 transition-colors">
+                <td class="py-3.5 px-4 font-bold text-slate-900">{m.infraccion}</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-sky-700">{m.base}</td>
+                <td class="py-3.5 px-4 font-black text-rose-600 bg-rose-50/50">{m.sancion}</td>
+                <td class="py-3.5 px-4 text-slate-600">{m.detalle}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Catálogo de Prohibiciones -->
+    <div>
+      <div class="flex items-center gap-2.5 mb-6">
+        <span class="text-3xl">🚫</span>
+        <div>
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900">Catálogo de Prohibiciones Explícitas (Art. 8)</h2>
+          <p class="text-xs sm:text-sm text-slate-500">Normas de obligatorio cumplimiento para ti, tus huéspedes y tu personal de servicio.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {prohibiciones.map(p => (
+          <div class="bg-white border border-slate-200 hover:border-sky-300 rounded-3xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-3xl">{p.icono}</span>
+                <div class="flex items-center gap-1.5">
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-100 text-slate-600">
+                    {p.tipo}
+                  </span>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-bold bg-sky-50 text-sky-700 border border-sky-200">
+                    Art. {p.num}
+                  </span>
+                </div>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 mb-2">{p.titulo}</h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">{p.descripcion}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Recordatorio de Responsabilidad Solidaria -->
+    <div class="p-6 sm:p-7 rounded-3xl bg-amber-50 border-2 border-amber-200 text-xs sm:text-sm text-amber-950 leading-relaxed shadow-sm">
+      <div class="flex items-center gap-2 font-bold text-amber-900 text-base mb-2">
+        <span>⚠️</span> Artículo 7.2 & 7.4: Responsabilidad Plena del Propietario
+      </div>
+      <p>
+        La ley de propiedad horizontal colombiana y este manual determinan que <strong>el copropietario responderá patrimonialmente por todo daño o perjuicio</strong> ocasionado por huéspedes o trabajadores en áreas comunes (laguna, ascensores, pasillos, piscinas). Asimismo, los valores de reparación o multas serán cargados de inmediato a la cuenta de cobro del apartamento.
+      </p>
+    </div>
+
+  </div>
+</Layout>
